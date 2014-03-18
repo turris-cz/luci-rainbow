@@ -1,11 +1,6 @@
 local m, s, o;
 m = Map("rainbow", "Rainbow", "Utility Rainbow enables control of LEDs of Turris router.");
 
---[[
-config led 'all'
-	option color '33ff33'
-	option status 'auto'
-]]
 
 s = m:section(NamedSection, "all", "led", "Set status and color of all LEDs");
 	--s.addremove = true;
