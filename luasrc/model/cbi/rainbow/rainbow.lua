@@ -1,6 +1,9 @@
 local m, s, o;
 m = Map("rainbow", "Rainbow", "Utility Rainbow enables control of LEDs of Turris router.");
 
+function m.on_after_commit(self)
+	luci.sys.call("/etc/init.d/rainbow restart");
+end
 
 s = m:section(NamedSection, "all", "led", "Set status and color of all LEDs");
 	--s.addremove = true;
