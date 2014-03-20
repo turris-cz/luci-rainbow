@@ -31,7 +31,7 @@ local status_opts = {
 
 
 -- Start to build form and page
-s = m:section(NamedSection, "all", "led", translate("Set status and color of all LEDs"));
+s = m:section(NamedSection, "all", "led", translate("Color and status of all LEDs"));
 	s.addremove = false;
 
 o = s:option(Value, "color", translate("Color"));
@@ -42,7 +42,7 @@ o = s:option(Value, "color", translate("Color"));
 		o:value(k, v);
 	end
 
-o = s:option(ListValue, "status", translate("LEDs status"));
+o = s:option(ListValue, "status", translate("Status"));
 	o.default = 'auto'
 	o.optional = false;
 	o.rmempty = false;
@@ -51,7 +51,7 @@ o = s:option(ListValue, "status", translate("LEDs status"));
 	end
 
 for k, v in pairs(led_sections) do
-	s = m:section(NamedSection, k, "led", translatef("Set status and color of %s LED", v));
+	s = m:section(NamedSection, k, "led", translatef("Color and status of %s LED", v));
 		s.addremove = true;
 
 	o = s:option(Value, "color", translate("Color"));
@@ -62,7 +62,7 @@ for k, v in pairs(led_sections) do
 			o:value(k, v);
 		end
 
-	o = s:option(ListValue, "status", translate("LED status"));
+	o = s:option(ListValue, "status", translate("Status"));
 		o.default = 'auto';
 		o.optional = false;
 		o.rmempty = false;
