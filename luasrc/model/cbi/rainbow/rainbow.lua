@@ -25,8 +25,8 @@ colors["33FF33"] = translatef("Real white %s", "(33FF33)"); --How can I do it be
 
 local status_opts = {
 	auto = translate("Auto"),
-	enable = translate("Enable"),
-	disable = translate("Disable")
+	enable = translate("On"),
+	disable = translate("Off")
 };
 
 
