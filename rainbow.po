@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Auto"
+msgstr "Automaticky"
+
+msgid "Black %s"
+msgstr "Černá %s"
+
+msgid "Blue %s"
+msgstr "Modrá %s"
+
+msgid "Color and status of all LEDs"
+msgstr "Barva a stav všech LED diod"
+
+msgid "Color and status of %s LED"
+msgstr "Barva a stav LED diody '%s'"
+
+msgid "Color"
+msgstr "Barva"
+
+msgid "Off"
+msgstr "Vypnuto"
+
+msgid "On"
+msgstr "Zapnuto"
+
+msgid "Green %s"
+msgstr "Zelená %s"
+
+msgid "Real white %s"
+msgstr "Skutečná bílá %s"
+
+msgid "Red %s"
+msgstr "Červená %s"
+
+msgid "Status"
+msgstr "Stav"
+
+msgid "Utility Rainbow enables control of LEDs of Turris router."
+msgstr "Nástroj Rainbow umožňuje ovládání LED diod routeru Turris."
+
+msgid "White %s"
+msgstr "Bílá %s"
+
