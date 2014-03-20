@@ -1,19 +1,40 @@
 local m, s, o;
-m = Map("rainbow", "Rainbow", "Utility Rainbow enables control of LEDs of Turris router.");
+m = Map("rainbow", "Rainbow", translate("Utility Rainbow enables control of LEDs of Turris router."));
 
+-- Define callback function
 function m.on_after_commit(self)
 	luci.sys.call("/etc/init.d/rainbow restart");
 end
 
-local led_sections = { pwr = "Power", wifi = "Wi-Fi", lan = "LAN ports", wan = "WAN" };
-local colors = { red = "Red (FF0000)", green = "Green (00FF00)", blue = "Blue (0000FF)", white = "White (FFFFFF)", black = "Black (000000)" };
-colors["33FF33"] = "Real white (33FF33)"; --How can I do it better in lua?
-local status_opts = { auto = "Auto", enable = "Enable", disable = "Disable" };
+-- Define values for form
+local led_sections = {
+	pwr = "Power",
+	wifi = "Wi-Fi",
+	lan = "LAN ports",
+	wan = "WAN"
+};
 
-s = m:section(NamedSection, "all", "led", "Set status and color of all LEDs");
-	--s.addremove = true;
+local colors = {
+	red = translatef("Red %s", "(FF0000)"),
+	green = translatef("Green %s", "(00FF00)"),
+	blue = translatef("Blue %s", "(0000FF)"),
+	white = translatef("White %s", "(FFFFFF)"),
+	black = translatef("Black %s", "(000000)")
+};
+colors["33FF33"] = translatef("Real white %s", "(33FF33)"); --How can I do it better in lua?
 
-o = s:option(Value, "color", "Color");
+local status_opts = {
+	auto = translate("Auto"),
+	enable = translate("Enable"),
+	disable = translate("Disable")
+};
+
+
+-- Start to build form and page
+s = m:section(NamedSection, "all", "led", translate("Set status and color of all LEDs"));
+	s.addremove = false;
+
+o = s:option(Value, "color", translate("Color"));
 	o.default = '33FF33'
 	o.optional = false;
 	o.rmempty = false;
@@ -21,7 +42,7 @@ o = s:option(Value, "color", "Color");
 		o:value(k, v);
 	end
 
-o = s:option(ListValue, "status", "LEDs status");
+o = s:option(ListValue, "status", translate("LEDs status"));
 	o.default = 'auto'
 	o.optional = false;
 	o.rmempty = false;
@@ -30,10 +51,10 @@ o = s:option(ListValue, "status", "LEDs status");
 	end
 
 for k, v in pairs(led_sections) do
-	s = m:section(NamedSection, k, "led", "Set status and color of " .. v .. " LED");
+	s = m:section(NamedSection, k, "led", translatef("Set status and color of %s LED", v));
 		s.addremove = true;
 
-	o = s:option(Value, "color", "Color");
+	o = s:option(Value, "color", translate("Color"));
 		o.default = '33FF33'
 		o.optional = false;
 		o.rmempty = false;
@@ -41,7 +62,7 @@ for k, v in pairs(led_sections) do
 			o:value(k, v);
 		end
 
-	o = s:option(ListValue, "status", "LED status");
+	o = s:option(ListValue, "status", translate("LED status"));
 		o.default = 'auto';
 		o.optional = false;
 		o.rmempty = false;
