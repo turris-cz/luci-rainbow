@@ -1,0 +1,8 @@
+This repository has one hack. I need to keep two different versions together -
+HW specific content. We don't want to have 2 packages and Lua doesn't know any
+compile time ifdef's'.
+
+I will use ifdef in package definition to copy relevant files. In package, there
+isn't any "build", it just makes copy.
+
+Symbolic link to some set of source files is for development purposes only.
