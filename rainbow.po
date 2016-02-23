@@ -22,6 +22,9 @@ msgstr "Barva a stav všech LED diod"
 msgid "Color and status of %s LED"
 msgstr "Barva a stav LED diody '%s'"
 
+msgid "Color and status of %s"
+msgstr "Barva a stav diody '%s'"
+
 msgid "Color"
 msgstr "Barva"
 
