@@ -49,6 +49,9 @@ msgstr "Stav"
 msgid "Utility Rainbow enables control of LEDs of Turris router."
 msgstr "Nástroj Rainbow umožňuje ovládání LED diod routeru Turris."
 
+msgid "Utility Rainbow enables control of Omnia's LEDs."
+msgstr "Nástroj Rainbow umožňuje ovládání LED diod routeru Omnia."
+
 msgid "White %s"
 msgstr "Bílá %s"
 

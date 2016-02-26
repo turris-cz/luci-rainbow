@@ -1,5 +1,5 @@
 local m, s, o;
-m = Map("rainbow", "Rainbow", translate("Utility Rainbow enables control of LEDs of Turris router."));
+m = Map("rainbow", "Rainbow", translate("Utility Rainbow enables control of Omnia's LEDs."));
 
 -- Define callback function
 function m.on_after_commit(self)
