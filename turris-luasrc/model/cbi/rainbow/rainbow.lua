@@ -1,11 +1,6 @@
 local m, s, o;
 m = Map("rainbow", "Rainbow", translate("Utility Rainbow enables control of LEDs of Turris router."));
 
--- Define callback function
-function m.on_after_commit(self)
-	luci.sys.call("/etc/init.d/rainbow restart");
-end
-
 -- Define values for form
 local led_sections = {
 	pwr = "Power",
@@ -70,5 +65,10 @@ for k, v in pairs(led_sections) do
 			o:value(k, v);
 		end
 end
+
+m.on_after_apply = function()
+	luci.sys.call("/etc/init.d/rainbow restart");
+end
+m.apply_on_parse = false
 
 return m;
