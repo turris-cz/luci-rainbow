@@ -3,25 +3,27 @@ m = Map("rainbow", "Rainbow", translate("Utility Rainbow enables control of Omni
 
 -- Define values for form
 local led_sections = {
-	{"pwr", "Power"},
-	{"lan", "LAN ports"},
-	{"lan0", "LAN 0"},
-	{"lan1", "LAN 1"},
-	{"lan2", "LAN 2"},
-	{"lan3", "LAN 3"},
-	{"lan4", "LAN 4"},
+	{"power", "Power"},
+	{"lan_0", "LAN 0"},
+	{"lan_1", "LAN 1"},
+	{"lan_2", "LAN 2"},
+	{"lan_3", "LAN 3"},
+	{"lan_4", "LAN 4"},
 	{"wan", "WAN"},
-	{"pci1", "PCI 1"},
-	{"pci2", "PCI 2"},
-	{"pci3", "PCI 3"},
-	{"usr1", "User 1"},
-	{"usr2", "User 2"}
+	{"wlan_1", "PCI 1"},
+	{"wlan_2", "PCI 2"},
+	{"wlan_3", "PCI 3"},
+	{"indicator_1", "User 1"},
+	{"indicator_2", "User 2"}
 };
 
 local colors = {
 	red = translatef("Red %s", "(FF0000)"),
 	green = translatef("Green %s", "(00FF00)"),
 	blue = translatef("Blue %s", "(0000FF)"),
+	yellow = translatef("Yellow %s", "(FFFF00)"),
+	cyan = translatef("Cyan %s", "(00FFFF)"),
+	magenta = translatef("Magenta %s", "(FF00FF)"),
 	white = translatef("White %s", "(FFFFFF)"),
 	black = translatef("Black %s", "(000000)")
 };
