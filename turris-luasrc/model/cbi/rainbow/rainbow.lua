@@ -3,9 +3,13 @@ m = Map("rainbow", "Rainbow", translate("Utility Rainbow enables control of LEDs
 
 -- Define values for form
 local led_sections = {
-	pwr = "Power",
-	wifi = "Wi-Fi",
-	lan = "LAN ports",
+	power = "Power",
+	wlan = "Wi-Fi",
+	lan_1 = "LAN 1",
+	lan_2 = "LAN 2",
+	lan_3 = "LAN 3",
+	lan_4 = "LAN 4",
+	lan_5 = "LAN 5",
 	wan = "WAN"
 };
 
@@ -13,6 +17,9 @@ local colors = {
 	red = translatef("Red %s", "(FF0000)"),
 	green = translatef("Green %s", "(00FF00)"),
 	blue = translatef("Blue %s", "(0000FF)"),
+	yellow = translatef("Yellow %s", "(FFFF00)"),
+	cyan = translatef("Cyan %s", "(00FFFF)"),
+	magenta = translatef("Magenta %s", "(FF00FF)"),
 	white = translatef("White %s", "(FFFFFF)"),
 	black = translatef("Black %s", "(000000)")
 };
