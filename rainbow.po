@@ -55,3 +55,11 @@ msgstr "Nástroj Rainbow umožňuje ovládání LED diod routeru Omnia."
 msgid "White %s"
 msgstr "Bílá %s"
 
+msgid "Cyan %s"
+msgstr "Azurová %s"
+
+msgid "Magenta %s"
+msgstr "Purpurová %s"
+
+msgid "Yellow %s"
+msgstr "Žlutá %s"
